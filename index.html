@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>KAMASA DECIDES 2026/2027 | StrawPoll</title>
+  <style>
+    /* RESET & GLOBAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* Solid green background only */
+      background: #1e7e34;
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      line-height: 1.4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* MAIN CARD CONTAINER – clean white card on green background */
+    .poll-container {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 2rem;
+      box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    /* Header styling - BIGGER & BOLDER */
+    .poll-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    .poll-header h1 {
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f5c23, #0a4519);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .poll-header p {
+      color: #2c5a2e;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      font-weight: 500;
+      background: rgba(30, 126, 52, 0.12);
+      display: inline-block;
+      padding: 0.4rem 1.5rem;
+      border-radius: 40px;
+    }
+
+    /* The actual strawpoll embed wrapper – fully responsive */
+    .strawpoll-embed {
+      height: 480px;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s;
+    }
+
+    /* Make iframe fill the flex area */
+    .strawpoll-embed iframe {
+      position: static;
+      visibility: visible;
+      display: block;
+      width: 100%;
+      flex-grow: 1;
+      border: none;
+      background: #fff;
+    }
+
+    /* Footer styling */
+    .poll-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1f3b2c;
+      background: rgba(30, 126, 52, 0.1);
+      padding: 0.6rem 1.2rem;
+      border-radius: 60px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .poll-footer span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Responsive fine-tuning */
+    @media (max-width: 560px) {
+      body {
+        padding: 0.8rem;
+      }
+      .poll-container {
+        padding: 1rem;
+      }
+      .strawpoll-embed {
+        height: 440px;
+      }
+      .poll-header h1 {
+        font-size: clamp(1.6rem, 7vw, 2.4rem);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .strawpoll-embed {
+        height: 400px;
+      }
+    }
+
+    @media (min-height: 800px) and (min-width: 640px) {
+      .strawpoll-embed {
+        height: 520px;
+      }
+    }
+
+    iframe {
+      width: 100%;
+    }
+  </style>
+  <!-- Preconnect to StrawPoll CDN for faster widget loading -->
+  <link rel="preconnect" href="https://cdn.strawpoll.com">
+</head>
+<body>
+
+<div class="poll-container">
+  <div class="poll-header">
+    <h1>🇰🇦🇲🇦🇸🇦 DECIDES<br>2026/2027</h1>
+    <p>Living by example — cast your vote below</p>
+  </div>
+
+  <!-- STRAWPOLL EMBED (vote counts visible) -->
+  <div class="strawpoll-embed" id="strawpoll_mpnb1EV6Jy5" style="height: 480px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;">
+    <iframe 
+      title="KAMASA Election Poll" 
+      id="strawpoll_iframe_mpnb1EV6Jy5" 
+      src="https://strawpoll.com/embed/mpnb1EV6Jy5" 
+      style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1;" 
+      frameborder="0" 
+      allowfullscreen 
+      allowtransparency>
+      Loading...
+    </iframe>
+    <script nonce="ZWMyYjY5YmZlNjI3ZDgyYmZiYmQ3MzAzOTFkNjI3MDc3NWIyNWFkYg==" async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <div class="poll-footer">
+    <span>🌍 KAMASA Electoral Commission • 2026/2027 term</span>
+  </div>
+</div>
+
+</body>
+</html>
