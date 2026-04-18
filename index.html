@@ -36,6 +36,25 @@
       transition: all 0.2s ease;
     }
 
+    /* Logo section styling */
+    .logo-section {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .kamasa-logo {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+      transition: transform 0.2s ease;
+    }
+
+    .kamasa-logo:hover {
+      transform: scale(1.02);
+    }
+
     /* Header styling - BIGGER & BOLDER */
     .poll-header {
       text-align: center;
@@ -127,11 +146,17 @@
       .poll-header h1 {
         font-size: clamp(1.6rem, 7vw, 2.4rem);
       }
+      .kamasa-logo {
+        max-width: 140px;
+      }
     }
 
     @media (max-width: 420px) {
       .strawpoll-embed {
         height: 400px;
+      }
+      .kamasa-logo {
+        max-width: 120px;
       }
     }
 
@@ -151,9 +176,19 @@
 <body>
 
 <div class="poll-container">
+  <!-- KAMASA LOGO SECTION -->
+  <div class="logo-section">
+    <img 
+      class="kamasa-logo" 
+      src='logo 2.jpeg'
+      alt="KAMASA Logo - Kasese Makerere Students' Association"
+      title="KAMASA - Kasese Makerere Students' Association"
+    >
+  </div>
+
   <div class="poll-header">
     <h1>KAMASA DECIDES<br>2026/2027</h1>
-    <p>Living by example — cast your vote below</p>
+    <p>Living By Example — cast your vote below</p>
   </div>
 
   <!-- STRAWPOLL EMBED (vote counts visible) -->
